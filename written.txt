@@ -1,0 +1,44 @@
+i:
+program 1:
+n = 5: 51 cycles
+n = 10: 101 cycles
+n = 20: 201 cycles
+n = 40: 401 cycles
+n = 80: 801 cycles
+
+program 2:
+n = 5: 71 cycles
+n = 10: 141 cycles
+n = 20: 281 cycles
+n = 40: 561 cycles
+n = 80: 1121 cycles
+
+program 3:
+n = 5: 61 cycles
+n = 10: 111 cycles
+n = 20: 211 cycles
+n = 40: 411 cycles
+n = 80: 811 cycles
+
+ii:
+program 1:
+CYCLES = 50 * n + 1
+
+program 2:
+CYCLES = 70 * n + 1
+
+program 3:
+CYCLES = 50 * n + 11
+
+iii:
+program 1: CPI = 1 for large n
+
+program 2: CPI = 1 for large n
+
+program 3: CPI = 1 for large n
+
+iv:
+A cycle can be saved at the end of each iteration if the hardware finds a way to "move up" the write being done in index 3.
+This would allow for the value to be read 1 cycle earlier by the initial load at the start of each iteration except for the first.
+Alternatively, the read in the pipeline could be moved to a later time, or the hardware could find a means of forwarding the instruction
+into the intial load.
