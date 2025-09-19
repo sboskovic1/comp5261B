@@ -22,20 +22,20 @@ n = 80: 811 cycles
 
 ii:
 program 1:
-CYCLES = 50 * n + 1
+CYCLES = 10 * n + 1
 
 program 2:
-CYCLES = 70 * n + 1
+CYCLES = 14 * n + 1
 
 program 3:
-CYCLES = 50 * n + 11
+CYCLES = 12 * n + 11
 
 iii:
-program 1: CPI = 1 for large n
+program 1: CPI = (10n / 5n) = 2 for large n
 
-program 2: CPI = 1 for large n
+program 2: CPI = (14n / 9n) = 1.56 for large n
 
-program 3: CPI = 1 for large n
+program 3: CPI = (12n / 5n) = 2.4 for large n
 
 iv:
 A cycle can be saved at the end of each iteration if the hardware finds a way to "move up" the write being done in index 3.
